@@ -75,15 +75,19 @@ img.center {
 ---
 ## How Git Works
 
-Git has **3** main states for a file:
+
+- Git has **3** main states for a file:
 - modified
 - staged
 - committed 
 
-Likewise, there are 3 main sections to any git project:
+
+- Likewise, there are 3 main sections to any git project:
 - working directory
 - staging area
 - git directory (repository)
+
+
 
 ---
 ## Git Workflow 
@@ -97,8 +101,6 @@ Likewise, there are 3 main sections to any git project:
 4. (optional): push changes to remote repository
 
 --- 
-## Git Workflow (2)
-
 
 <p style= "text-align:center"><img src="assets/img/git_workflow.png"> </p>
 

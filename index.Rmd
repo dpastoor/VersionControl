@@ -35,9 +35,6 @@ img.center {
 - Establishing 'Best Practices'
 
 ---
-## Overview of Version Control
-
----
 ## What is a Version Control System
 - VC allows you to track the history of a collection of files 
 - Offers functionality to revert collection of files to another version (future/previous)
@@ -48,7 +45,7 @@ img.center {
 ---
 ## Repository Visualization
 
-**needs image**
+<p style= "text-align:center"><img src="assets/img/git_snapshot.png"> </p>
 
 
 ---
@@ -61,20 +58,23 @@ img.center {
 
 ---
 ## Remote Repositories
+
 - To make it easier to manage the history of a project - a remote server is often as a central repository
 - This is only for convenience - it is not 'special' compared to any other clone
 - It does make it easy for multiple people to work from, and sync to, an updated copy
 - Users can both **pull** changes from the remote repository to their computer
 - as well as **push** changes from their computer to the remote repository
 
+
 ---
 ## Repository Visualization
 
-#**need image**
+<p style= "text-align:center"><img src="assets/img/git_remote.png"> </p>
 
 
 ---
 ## How Git Works
+
 Git has **3** main states for a file:
 - modified
 - staged
@@ -85,17 +85,22 @@ Likewise, there are 3 main sections to any git project:
 - staging area
 - git directory (repository)
 
---- 
-## Git Workflow
+---
+## Git Workflow 
 
-*** {name:left}
-**needs image** like Fig 1-6
-
-*** {name:right}
 1. modify files in working directory
+
 2. Stage a file (add a snapshot to staging area)
-3. Commit the staged snapshot to the git direcoty
-*4.* (optional): push changes to remote repository
+
+3. Commit the staged snapshot to the git directory
+
+4. (optional): push changes to remote repository
+
+--- 
+## Git Workflow (2)
+
+
+<p style= "text-align:center"><img src="assets/img/git_workflow.png"> </p>
 
 --- 
 ## Let's go hands-on
@@ -137,26 +142,26 @@ Or a specific key value is by doing
 git config <key>
 ```
 
-ie `git git config user.name`
+ie: 
+
+`git config user.name`
 
 ---
 ## Getting Help
 
-You can get help by typing
-```
-git help <verb>
-```
+You can get help by typing:
+
+```git help <verb>```
 
 for example, to get help about the config command:
-```
-git help config
-```
+
+```git help config```
 
 ---
 ## Creating a New Repository
 For our purposes, the easiest way to manage a new repository is to initialize an empty repository on bitbucket/github and use that as a blank slate to start your project.
 
-### To start, to to [bitbucket](https://bitbucket.org)
+## To start, go to [bitbucket](https://bitbucket.org)
 
 ---
 
@@ -239,6 +244,4 @@ We can now go back to bitbucket and see that it has been successfully updated
 <p style= "text-align:center"><img src="assets/img/bb_checkPush.jpg"> </p>
 
 
----
-# Version Control 'Best Practices'
 

@@ -41,14 +41,428 @@
     <!-- SLIDES -->
       <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Outline</h2>
+    
   </hgroup>
   <article>
-    <ul>
+    <style>
+em {
+  font-style: italic
+}
+strong {
+  font-weight: bold;
+}
+pre {
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+}
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+
+<h2>Outline</h2>
+
+<ul>
 <li>Overview of Version Control</li>
 <li>Basics of Git</li>
 <li>Establishing &#39;Best Practices&#39;</li>
 </ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Overview of Version Control</h2>
+  </hgroup>
+  <article>
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>What is a Version Control System</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>VC allows you to track the history of a collection of files </li>
+<li>Offers functionality to revert collection of files to another version (future/previous)</li>
+<li>Each version is a <strong>Snapshot</strong> of the files at a certain time</li>
+<li>The collection of files and their complete history is called a <strong>repository</strong></li>
+<li>Any type of file can be version controlled</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Repository Visualization</h2>
+  </hgroup>
+  <article>
+    <p><strong>needs image</strong></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Git</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>Git is one of many possible version control systems </li>
+<li>A distinguishing feature is it uses a <strong>distributed version control</strong> architecture</li>
+<li>A user can <strong>clone</strong> (copy) a full existing repository</li>
+<li>Each clone contains the full history of the collection of files and all functionality</li>
+<li>The repositories can exchange versions of the files with other repositories</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Remote Repositories</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>To make it easier to manage the history of a project - a remote server is often as a central repository</li>
+<li>This is only for convenience - it is not &#39;special&#39; compared to any other clone</li>
+<li>It does make it easy for multiple people to work from, and sync to, an updated copy</li>
+<li>Users can both <strong>pull</strong> changes from the remote repository to their computer</li>
+<li>as well as <strong>push</strong> changes from their computer to the remote repository</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Repository Visualization</h2>
+  </hgroup>
+  <article>
+    <p>#<strong>need image</strong></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>How Git Works</h2>
+  </hgroup>
+  <article>
+    <p>Git has <strong>3</strong> main states for a file:</p>
+
+<ul>
+<li>modified</li>
+<li>staged</li>
+<li>committed </li>
+</ul>
+
+<p>Likewise, there are 3 main sections to any git project:</p>
+
+<ul>
+<li>working directory</li>
+<li>staging area</li>
+<li>git directory (repository)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Git Workflow</h2>
+  </hgroup>
+  <article>
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Let&#39;s go hands-on</h2>
+  </hgroup>
+  <article>
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Initial setup</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>We are going to learn git (mostly) from the Rstudio IDE to start - it makes it easy to start projects and has a &#39;point-and-click&#39; element that takes some of the learning curve away</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Setting your identity</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>The first time on a computer you must set your user-name and email address</li>
+<li>This information is included in your commits</li>
+</ul>
+
+<pre><code>git config --global user.name &quot;&lt;your name&gt;&quot;
+git config --global user.email &lt;emailaddress&gt;
+</code></pre>
+
+<p>ex:</p>
+
+<pre><code>git config --global user.name &quot;Devin Pastoor&quot;
+git config --global user.email devin.pastoor@umaryland.edu
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Checking Your Settings</h2>
+  </hgroup>
+  <article>
+    <p>You can check your settings easily by trying</p>
+
+<pre><code>git config --list
+</code></pre>
+
+<p>Or a specific key value is by doing</p>
+
+<pre><code>git config &lt;key&gt;
+</code></pre>
+
+<p>ie <code>git git config user.name</code></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Getting Help</h2>
+  </hgroup>
+  <article>
+    <p>You can get help by typing</p>
+
+<pre><code>git help &lt;verb&gt;
+</code></pre>
+
+<p>for example, to get help about the config command:</p>
+
+<pre><code>git help config
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Creating a New Repository</h2>
+  </hgroup>
+  <article>
+    <p>For our purposes, the easiest way to manage a new repository is to initialize an empty repository on bitbucket/github and use that as a blank slate to start your project.</p>
+
+<h3>To start, to to <a href="https://bitbucket.org">bitbucket</a></h3>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Creating a New Repository (2)</h2>
+  </hgroup>
+  <article>
+    <p>Click on the &#39;Create&#39; button in the top left</p>
+
+<p style= "text-align:center"><img src="assets/img/bbCreateRepo.jpg"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Name Your Repository</h2>
+  </hgroup>
+  <article>
+    <p>(optionally) can set settings for issue tracking, wiki, and language</p>
+
+<p style= "text-align:center"><img src="assets/img/bbNameRepo.jpg"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Repository Set-up</h2>
+  </hgroup>
+  <article>
+    <p>You can easily follow the bitbucket guide to set up your repository from scratch</p>
+
+<p style= "text-align:center"><img src="assets/img/bb_clone_repo.jpg"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Repository Set-up from R-Studio</h2>
+  </hgroup>
+  <article>
+    <p>But we&#39;re going to do it from R-studio
+1. Click on the &#39;Clone&#39; button while in the repository on bitbucket.</p>
+
+<ul>
+<li>You only want to highlight the https portion (stuff after the &#39;git clone&#39;)</li>
+</ul>
+
+<p style= "text-align:center"><img src="assets/img/bb_httpslink.jpg"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>Repository Set-up from R-Studio (2)</h2>
+  </hgroup>
+  <article>
+    <ol>
+<li>Create a new R-project</li>
+</ol>
+
+<p style= "text-align:center"><img src="assets/img/rstudio_createproject.jpg"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Repository Set-up from R-Studio (3)</h2>
+  </hgroup>
+  <article>
+    <ol>
+<li>Choose &#39;Create Project From: Version Control&#39;</li>
+</ol>
+
+<p style= "text-align:center"><img src="assets/img/rstudio_vcrepo.jpg"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Repository Set-up from R-Studio (4)</h2>
+  </hgroup>
+  <article>
+    <ol>
+<li>Choose &#39;Git&#39;</li>
+</ol>
+
+<p style= "text-align:center"><img src="assets/img/rstudio_gitrepo.jpg"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>Repository Set-up from R-Studio (5)</h2>
+  </hgroup>
+  <article>
+    <ol>
+<li>Paste link copied from bitbucket in &#39;Repository URL&#39; and create project</li>
+</ol>
+
+<p style= "text-align:center"><img src="assets/img/rstudio_repoURL.jpg"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>Repository Set-up from R-Studio (6)</h2>
+  </hgroup>
+  <article>
+    <ol>
+<li>Type in BB password when it asks and your repository will be cloned to your computer</li>
+</ol>
+
+<p style= "text-align:center"><img src="assets/img/rstudio_cloneRepo.jpg"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>Our First Commit</h2>
+  </hgroup>
+  <article>
+    <p>Let&#39;s add the Rproject file to the repository
+1. Go to the &#39;Git&#39; tab on your workspace tab in Rstudio and click &#39;Commit&#39;
+2. Check anything that you&#39;d like to stage (in this case everything) and type a commit message</p>
+
+<p style= "text-align:center"><img src="assets/img/rstudio_commit.jpg"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-26" style="background:;">
+  <hgroup>
+    <h2>Our First Commit (2)</h2>
+  </hgroup>
+  <article>
+    <p>The local repository has now been updated! But we want to push that change to the remote repository
+3. Choose &#39;Push&#39; and type in your BB pasword when prompted</p>
+
+<p style= "text-align:center"><img src="assets/img/rstudio_push.jpg"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>Check the Remote</h2>
+  </hgroup>
+  <article>
+    <p>We can now go back to bitbucket and see that it has been successfully updated</p>
+
+<p style= "text-align:center"><img src="assets/img/bb_checkPush.jpg"> </p>
 
   </article>
   <!-- Presenter Notes -->
